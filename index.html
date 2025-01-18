@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPL TECHNOLOGIES</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .logo img {
+      width: 50px; /* Adjust logo size as needed */
+      height: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ff6347;
+    }
+
+    /* Hero Section */
+    #home {
+      background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #home h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    #home p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    #home button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    #home button:hover {
+      background-color: #333;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    /* Services Section */
+    .services {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 2rem;
+    }
+
+    .service {
+      background-color: white;
+      padding: 2rem;
+      width: 30%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+    }
+
+    .service h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .service p {
+      font-size: 1.1rem;
+      color: #777;
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .portfolio-item {
+      background-color: #eee;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .portfolio-item:hover {
+      transform: scale(1.05);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .portfolio-item h3 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .portfolio-item p {
+      color: #777;
+      font-size: 1.1rem;
+    }
+
+    /* Contact Section */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form button {
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #ff6347;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .portfolio {
+        grid-template-columns: 1fr;
+      }
+
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service {
+        width: 80%;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header>
+    <div class="logo">
+      <!-- Logo Image (add your logo image here) -->
+      <img src="https://content.jdmagicbox.com/comp/madurai/l3/0452px452.x452.160416145926.s1l3/catalogue/ipl-technologies-koodal-nagar-madurai-computer-training-institutes-r37vg.jpg" alt="IPL Technologies Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Courses</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home">
+    <h1>Welcome to IPL Technologies</h1>
+    <p>Empowering the next generation with cutting-edge technologies and knowledge.</p>
+    <button onclick="alert('Thank you for exploring our portfolio!')">Explore Now</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>IPL Technologies is a leading provider of computer training and technology services. We strive to empower individuals and organizations by equipping them with the knowledge and skills needed to thrive in the digital world.</p>
+    <button onclick="alert('We are IPL Technologies!')">Learn More About Us</button>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>Check out the services we offer to help you build your online presence and grow your skills.</p>
+    <div class="services">
+      <div class="service">
+        <h3>Web Development</h3>
+        <p>Creating visually appealing and user-friendly website designs.</p>
+      </div>
+      <div class="service">
+        <h3>Coding for Kids</h3>
+        <p>Summer coding classes for kids, teaching them the fundamentals of programming.</p>
+      </div>
+      <div class="service">
+        <h3>Chess Classes</h3>
+        <p>Summer classes to sharpen strategic thinking and problem-solving skills through chess.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>Our Courses</h2>
+    <p>Take a look at some of the courses we offer to help you grow your skills in various technologies.</p>
+    <div class="portfolio">
+      <div class="portfolio-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-v15Swk2MbcCm4uOZVUGMWsKTv2fNL9oh_A&s" alt="C and C++">
+        <h3>C and C++</h3>
+        <p>Learn programming with OOPS concepts and data structures. Developed by Dennis Ritchie.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://www.shutterstock.com/image-vector/python-coding-language-sign-on-260nw-1389877574.jpg" alt="Python Programming">
+        <h3>Python</h3>
+        <p>A popular programming language developed by Guido van Rossum for data analysis and more.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://www.inexture.com/wp-content/uploads/2023/05/programming-background-with-person-working-with-codes-computer-2-scaled.jpg" alt="Java Programming">
+        <h3>Java</h3>
+        <p>A powerful, object-oriented language developed by Sun Microsystems for building scalable applications.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?cs=srgb&dl=pexels-kevin-ku-92347-577585.jpg&fm=jpg" alt="Computer Automation">
+        <h3>Computer Automation</h3>
+        <p>Automate tasks and processes on your system for increased productivity.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://woz-u.com/wp-content/uploads/2020/05/backend-project-architecture-development-database-development-picture-id1188511715.jpg" alt="SQL">
+        <h3>SQL</h3>
+        <p>Learn SQL for efficient database management and querying.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/005/442/693/small/data-science-analytics-internet-and-technology-concept-concept-photo.jpg" alt="Data Science">
+        <h3>Data Science</h3>
+        <p>Learn the art of analyzing data to extract meaningful insights and drive decision-making.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have a project in mind or want to get in touch? Fill out the form below!</p>
+    <form class="contact-form" id="contact-form">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 IPL TECHNOLOGIES. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Form Submission -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Thank you for contacting us! We will get back to you shortly.');
+      document.getElementById('contact-form').reset();
+    });
+  </script>
+
+</body>
+</html>
+
+
